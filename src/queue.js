@@ -17,8 +17,7 @@ class Queue {
 tail=null;
 head=null;
   getUnderlyingList() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+   return this.head
   }
 
   enqueue( value ) {
@@ -34,8 +33,9 @@ head=null;
   }
 
   dequeue() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+   const res=this.head;
+   this.head=this.head.next
+   return res.value
   }
 }
 
